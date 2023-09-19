@@ -1,0 +1,72 @@
+.Card, .CardFlipped {
+    width: 350px;
+    height: 480px;
+    position: absolute;
+}
+
+.CardBack {
+    justify-content: center;
+}
+
+.CardFront {
+    justify-content: flex-start;
+}
+
+.CardFront,
+.CardBack {
+    width: 350px;
+    height: 510px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    backface-visibility: hidden;
+    transition: transform 0.6s linear;
+}
+
+.Card .CardFront {
+    position: absolute;
+    transform: rotateY(0deg);
+}
+
+.Card .CardBack {
+    transform: rotateY(180deg);
+}
+
+.CardFlipped .CardFront{
+    transform: rotateY(-180deg);
+}
+
+.CardFlipped .CardBack {
+    transform: rotateY(0deg);
+}
+
+.Name {
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    width: 292px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.img {
+    border-radius: 6px;
+}
+
+.Attr_Container {
+    margin-top: 24px;
+}
+
+.Attr {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0.5rem 0;
+    border-bottom: 1px solid black;
+}
+
+.Attr:last-child {
+    border-bottom: none;
+}
